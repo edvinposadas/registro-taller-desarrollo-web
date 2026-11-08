@@ -61,6 +61,8 @@ Cambia inscritos a 20. Antes de ejecutar, responde: ¿se ejecutará inscritos++?
 ☑️
 Se agregaron los campos de teléfono y horario al formulario.
 El formulario utiliza JavaScript para escuchar el envío de datos.
+El diseño del formulario se adapta a pantallas pequeñas.
+
 
 ## HTML
 - Resumen propio (2–3 frases):
