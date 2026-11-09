@@ -36,7 +36,6 @@ h1 {
   font-size: clamp(2rem, 6vw, 3.5rem);
 }
 
-/* Cambios de la práctica */
 .panel {
   margin: 2rem 0;
   border: 1px solid #087e83;
@@ -56,7 +55,8 @@ label {
   font-weight: 700;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   min-height: 44px;
   border: 1px solid #aeb9c7;
@@ -66,7 +66,8 @@ input, select {
   font: inherit;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   outline: 3px solid #bde1d8;
   border-color: #087e83;
 }
@@ -111,4 +112,88 @@ button:hover {
   background: transparent !important;
 }
 
-/* TODO: Agrega aquí una regla @media para mejorar la vista en teléfonos. */
+/* Distribución de los reportes */
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  padding: 1rem;
+  border: 1px solid #dce2e8;
+  border-radius: 12px;
+  background: #f4faf8;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+  color: #18253b;
+}
+
+#total-inscripciones {
+  color: #087e83;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Listas y barras de los reportes */
+.tarjeta ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tarjeta li {
+  margin-bottom: 1rem;
+}
+
+.barra-fondo {
+  height: 14px;
+  background: #dce8e6;
+  border-radius: 8px;
+}
+
+.barra {
+  height: 100%;
+  background: #714da7;
+  border-radius: 8px;
+}
+
+/* Ajustes para teléfonos */
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 1rem 0;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  .resumen {
+    grid-template-columns: 1fr;
+  }
+}
+/* Formulario en dos columnas */
+.formulario-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Mantiene cada etiqueta junto a su campo */
+.campo {
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* El botón ocupa el ancho completo */
+.formulario-grid > button {
+  grid-column: 1 / -1;
+}
+
+/* En teléfonos, los campos aparecen en una columna */
+@media (max-width: 600px) {
+  .formulario-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -2,6 +2,8 @@
 
 Completa una ficha por tema con tus palabras. No copies párrafos de los sitios consultados.
 
+☑️ 7 puntos posibles de el cuestionario y en el segundo cuestionario 8 puntos 
+
 ☑️ Ejercicio 1 
 1. ¿Qué presenta los campos? HTML.
 2. ¿Qué evita que el navegador recargue la página? JavaScript, con preventDefault().
@@ -99,3 +101,5 @@ El diseño del formulario se adapta a pantallas pequeñas.
 - Explica add, commit y push:
 - Diferencia entre Git y GitHub:
 - Pregunta que podría aparecer en el examen:
+
+

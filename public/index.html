@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,49 +23,86 @@
     <section class="panel" aria-labelledby="titulo-formulario">
       <h2 id="titulo-formulario">Datos de inscripción</h2>
 
-      <form id="formulario-registro">
+      <form id="formulario-registro" class="formulario-grid">
 
-        <label for="nombre">Nombre completo</label>
-        <input
-          id="nombre"
-          name="nombre"
-          type="text"
-          required
-          minlength="2"
-          autocomplete="name"
-        >
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input
+            id="nombre"
+            name="nombre"
+            type="text"
+            required
+            minlength="2"
+            maxlength="100"
+            autocomplete="name"
+          >
+        </div>
 
-        <label for="correo">Correo electrónico</label>
-        <input
-          id="correo"
-          name="correo"
-          type="email"
-          required
-          autocomplete="email"
-        >
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input
+            id="correo"
+            name="correo"
+            type="email"
+            required
+            maxlength="254"
+            autocomplete="email"
+          >
+        </div>
 
-        <label for="taller">Taller</label>
-        <select id="taller" name="taller" required>
-          <option value="">Selecciona un taller</option>
-          <option value="HTML y CSS">HTML y CSS</option>
-          <option value="JavaScript">JavaScript</option>
-          <option value="Node.js y Express">Node.js y Express</option>
-        </select>
+        <div class="campo">
+          <label for="taller">Taller</label>
+          <select id="taller" name="taller" required>
+            <option value="">Selecciona un taller</option>
+            <option value="HTML y CSS">HTML y CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Node.js y Express">Node.js y Express</option>
+          </select>
+        </div>
 
-        <label for="telefono">Teléfono</label>
-        <input
-          id="telefono"
-          name="telefono"
-          type="tel"
-          required
-        >
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input
+            id="telefono"
+            name="telefono"
+            type="tel"
+            required
+            pattern="[0-9]{7,15}"
+            minlength="7"
+            maxlength="15"
+            inputmode="numeric"
+            autocomplete="tel"
+            title="Ingresa entre 7 y 15 números, sin espacios."
+          >
+        </div>
 
-        <label for="horario">Horario</label>
-        <select id="horario" name="horario" required>
-          <option value="">Selecciona un horario</option>
-          <option value="Mañana">Mañana</option>
-          <option value="Tarde">Tarde</option>
-        </select>
+        <div class="campo">
+          <label for="horario">Horario</label>
+          <select id="horario" name="horario" required>
+            <option value="">Selecciona un horario</option>
+            <option value="Mañana">Mañana</option>
+            <option value="Tarde">Tarde</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="modalidad">Modalidad</label>
+          <select id="modalidad" name="modalidad" required>
+            <option value="">Selecciona una modalidad</option>
+            <option value="Presencial">Presencial</option>
+            <option value="Virtual">Virtual</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="nivel_experiencia">Nivel de experiencia</label>
+          <select id="nivel_experiencia" name="nivel_experiencia" required>
+            <option value="">Selecciona un nivel</option>
+            <option value="Inicial">Inicial</option>
+            <option value="Intermedio">Intermedio</option>
+            <option value="Avanzado">Avanzado</option>
+          </select>
+        </div>
 
         <button type="submit">Registrar inscripción</button>
 
@@ -86,6 +124,35 @@
       </ul>
     </section>
 
+    <section class="panel" aria-labelledby="titulo-reportes">
+      <h2 id="titulo-reportes">Reportes de inscripciones</h2>
+
+      <div class="resumen">
+
+        <article class="tarjeta">
+          <h3>Total de inscripciones</h3>
+          <p id="total-inscripciones">0</p>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Inscripciones por taller</h3>
+          <ul id="reporte-talleres"></ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Inscripciones por horario</h3>
+          <ul id="reporte-horarios"></ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Inscripciones por modalidad</h3>
+          <ul id="reporte-modalidades"></ul>
+        </article>
+
+      </div>
+    </section>
+
   </main>
 </body>
+
 </html>

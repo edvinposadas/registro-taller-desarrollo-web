@@ -1,33 +1,62 @@
-# Proyecto: Registro de participantes para un taller — versión base
+# Registro de participantes para un taller
 
-Esta es la carpeta inicial para completar durante el repaso interactivo de Desarrollo Web. Busca cada comentario `TODO` y sigue las instrucciones del paso 19, “Proyecto final”, en `Repaso_Interactivo_Desarrollo_Web.html`.
+Aplicación web para registrar participantes en talleres de desarrollo web.
+
+## Tecnologías
+
+- HTML y CSS para la página.
+- JavaScript para las funciones del navegador.
+- Node.js y Express para el servidor y la API.
+- SQLite para guardar las inscripciones.
+
+## Funciones
+
+- Registrar, consultar, editar y eliminar inscripciones.
+- Validar los campos en el navegador y en el servidor.
+- Guardar los registros en SQLite.
+- Mostrar reportes por taller, horario y modalidad.
+- Adaptar la página a computadoras y teléfonos.
 
 ## Requisitos
-- Node.js 18 o superior (se recomienda LTS) y Visual Studio Code.
-- Conexión a internet la primera vez para instalar Express.
 
-## Ejecutar en VS Code
-1. Abre esta carpeta con **File → Open Folder**.
-2. Abre **Terminal → New Terminal**.
-3. Ejecuta `npm install`.
-4. Ejecuta `npm start`.
-5. Abre `http://localhost:3000`.
+- Node.js versión 22.13 o posterior.
+- npm.
 
-### Si PowerShell bloquea npm.ps1
-Si aparece un mensaje que dice que la ejecución de scripts está deshabilitada, usa estos comandos en la misma terminal:
+## Cómo ejecutar
 
-```powershell
-npm.cmd install
-npm.cmd start
-```
+1. Abre una terminal en la carpeta del proyecto.
+2. Instala las dependencias:
 
-También puedes cambiar el perfil de la terminal de VS Code a **Command Prompt** y usar los comandos `npm install` y `npm start`.
+   npm install
 
-El servidor y la ruta GET ya están preparados. Completa los TODO de HTML, CSS, JavaScript y la ruta POST. Los registros se guardan temporalmente en memoria y se borran al detener Node.
+3. Inicia el servidor:
 
-## API solicitada
-- `GET /api/inscripciones`: devuelve el arreglo de registros en JSON.
-- `POST /api/inscripciones`: recibe nombre, correo, teléfono, taller y horario; valida y crea una inscripción. Usa estado `201` al crear y `400` si los datos no son válidos.
+   npm start
 
-## Entrega en GitHub
-Sube el código fuente, `README.md` y `bitacora.md`. Completa al menos tres commits descriptivos y comparte el enlace del repositorio. No subas `node_modules/` ni archivos `.env`; ya están excluidos en `.gitignore`.
+4. Abre http://localhost:3000 en el navegador.
+
+La base de datos `registro_taller.db` se crea automáticamente
+al iniciar el servidor.
+
+## Rutas de la API
+
+- GET /api/inscripciones: consulta las inscripciones.
+- POST /api/inscripciones: registra una inscripción.
+- PUT /api/inscripciones/:id: actualiza una inscripción.
+- DELETE /api/inscripciones/:id: elimina una inscripción.
+- GET /api/reportes/resumen: consulta los datos de los reportes.
+
+## Pruebas
+
+1. Registra un participante con datos inventados.
+2. Comprueba que aparezca en la lista y en los reportes.
+3. Edita una inscripción y verifica el cambio.
+4. Elimina una inscripción de prueba.
+5. Reinicia el servidor y comprueba que los datos permanezcan.
+6. Revisa la página en pantalla ancha y angosta.
+
+## Autor
+
+Edvin Estuardo Posadas Mejia
+
+Clase: Desarrollo web
